@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+
+<body>
+    <header>
+        <h1>Recursos Multimídia — Programação Web 1</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Aula em Vídeo</h2>
+
+            <figure>
+                <video controls width="800" height="450"
+                    poster="../img/poster-aula.png"
+                    preload="metadata">
+
+                    <source src="videos/aula-html.mp4" type="video/mp4">
+                    <source src="videos/aula-html.webm" type="video/webm">
+
+                    <track kind="subtitles"
+                        src="legendas/aula-html.vtt"
+                        srclang="pt"
+                        label="Português"
+                        default>
+
+                    <p>
+                        Seu navegador não suporta vídeo HTML5.
+                        <a href="videos/aula-html.mp4">Baixe o vídeo aqui</a>.
+                    </p>
+                </video>
+
+                <figcaption>
+                    Vídeo 1 — Introdução ao HTML Semântico. Produção própria, IFAL, 2026.
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <section>
+            <h2>Audio com FallBack</h2>
+
+            <figure>
+                <audio controls preload="metadata">
+                    <source src="audios/episodio-html.mp3" type="audio/mpeg">
+                    <source src="audios/episodio-html.ogg" type="audio/ogg">
+
+                    <p>
+                        Seu navegador não suporta áudio HTML5.
+                        <a href="audios/episodio-html.mp3">Baixe o áudio aqui</a>.
+                    </p>
+                </audio>
+
+                <figcaption>
+                    Episódio 1 — Fundamentos de HTML.
+                    <a href="transcricao.html">Ler transcrição</a>
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <section>
+            <h2>Vídeo Externo — YouTube</h2>
+
+            <figure>
+                <iframe
+                    width="800"
+                    height="450"
+                    src="https://www.youtube-nocookie.com/embed/Fhy-5CtVkiM"
+                    title="Curso de HTML para iniciantes em português"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+                <figcaption>
+                    Curso de HTML para iniciantes — Canal Curso em Vídeo, plataforma YouTube.
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <section>
+            <h2>Banner Responsivo</h2>
+
+            <figure>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="../img/banner-mobile.jpg">
+
+                    <img
+                        src="../img/banner-mobile.jpg"
+                        alt="Banner promocional de curso de programação web exibindo computador e elementos de código"
+                        width="400"
+                        height="300">
+                </picture>
+
+                <figcaption>
+                    Banner adaptável para diferentes tamanhos de tela utilizando picture.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Atividade 4 — Capítulo 4 | Programação Web 1 |
+            Aluno: Matheus dos Santos Luna | Matrícula: 2026001015 |
+            <time datetime="2026-01-01">Janeiro de 2026</time>
+        </p>
+
+        <p><a href="../index.html">← Voltar à página principal</a></p>
+    </footer>
+</body>
+
+</html>
