@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AT02 — Cadastro de Usuário</title>
+</head>
+
+<body>
+    <h1>Cadastro de Usuário</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <div>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required minlength="3">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="8">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+        </div>
+
+        <br>
+
+        <fieldset>
+            <legend>Gênero</legend>
+
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label><br>
+
+            <input type="radio" id="outro" name="genero" value="outro">
+            <label for="outro">Outro</label><br>
+
+            <input type="radio" id="prefiro_nao_informar" name="genero" value="prefiro_nao_informar">
+            <label for="prefiro_nao_informar">Prefiro não informar</label>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <input type="checkbox" id="aceite" name="aceite" value="sim" required>
+
+            <label for="aceite">Aceito os termos de uso</label>
+        </div>
+
+        <br>
+
+        <button type="submit">Criar conta</button>
+        <button type="reset">Limpar campos</button>
+
+    </form>
+
+</body>
+
+</html>
