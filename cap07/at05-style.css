@@ -1,0 +1,150 @@
+@import url('at05-reset.css');
+@import url('at05-variables.css');
+
+body {
+    font-family: var(--fonte-base);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: var(--espaco-lg);
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+header a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.hero {
+    height: 100vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--espaco-xl);
+}
+
+.hero__titulo {
+    font-size: var(--texto-display);
+    font-family: var(--fonte-titulo);
+}
+
+.hero__subtitulo {
+    margin-bottom: var(--espaco-lg);
+}
+
+section {
+    margin-bottom: var(--espaco-xl);
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: var(--raio-md);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn--primario {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.btn--secundario {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.btn--perigo {
+    background-color: var(--cor-erro);
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus-visible {
+    outline: 2px solid black;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    padding: var(--espaco-lg);
+    border-radius: var(--raio-md);
+    box-shadow: var(--sombra-sm);
+    max-width: 400px;
+}
+
+.card__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--cor-destaque);
+    padding: 5px 10px;
+    border-radius: var(--raio-circulo);
+}
+
+.card__imagem {
+    height: 150px;
+    background-color: #ccc;
+    margin-bottom: var(--espaco-md);
+}
+
+table {
+    width: 300px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.form__grupo {
+    margin-bottom: var(--espaco-md);
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+}
+
+.form__input:focus {
+    outline: 2px solid var(--cor-primaria);
+}
+
+.form__input:required {
+    border-left: 3px solid var(--cor-destaque);
+}
+
+.form__input:valid {
+    border: 2px solid var(--cor-sucesso);
+}
+
+.form__input:invalid {
+    border: 2px solid var(--cor-erro);
+}
+
+.form__input::placeholder {
+    font-style: italic;
+}
+
+.form__botao {
+    margin-top: var(--espaco-md);
+}

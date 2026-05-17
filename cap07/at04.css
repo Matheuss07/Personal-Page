@@ -1,0 +1,130 @@
+:root {
+    --cor-primaria: #1a4d8f;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
+    --altura-nav: 60px;
+    --espaco-md: 1rem;
+    --espaco-lg: 2rem;
+    --raio-borda: 8px;
+    --raio-circulo: 9999px;
+    --z-nav: 1000;
+    --z-sticky: 100;
+    --z-btn-topo: 999;
+    --z-tooltip: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.nav-fixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--altura-nav);
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: var(--espaco-md);
+    z-index: var(--z-nav);
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+}
+
+header a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+main {
+    padding: calc(var(--altura-nav) + 20px) 20px 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.titulo-sticky {
+    position: sticky;
+    top: var(--altura-nav);
+    background-color: var(--cor-fundo);
+    padding: var(--espaco-md);
+    border-bottom: 1px solid #ccc;
+    z-index: var(--z-sticky);
+}
+
+.cartao-destaque {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: var(--raio-borda);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.selo {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: crimson;
+    color: white;
+    padding: 5px 10px;
+    border-radius: var(--raio-circulo);
+}
+
+.btn-topo {
+    position: fixed;
+    bottom: var(--espaco-lg);
+    right: var(--espaco-lg);
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: var(--z-btn-topo);
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip-texto {
+    visibility: hidden;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 6px;
+    border-radius: var(--raio-borda);
+    white-space: nowrap;
+    z-index: var(--z-tooltip);
+}
+
+.tooltip-container:hover .tooltip-texto {
+    visibility: visible;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWEB1 — Cap. 07 — AT05 — Mini Design System</title>
+    <link rel="stylesheet" href="at05-style.css">
+</head>
+
+<body>
+
+    <header>
+        <p><a href="../index.html"> Voltar para a página principal</a></p>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero__titulo">Cyber UI</h1>
+        <p class="hero__subtitulo">Mini design system para interfaces modernas</p>
+        <button class="hero__cta btn btn--primario">Começar</button>
+    </section>
+
+    <main>
+
+        <section>
+            <h2>Botões</h2>
+            <button class="btn btn--primario">Ação principal</button>
+            <button class="btn btn--secundario">Ação secundária</button>
+            <button class="btn btn--perigo">Ação destrutiva</button>
+            <button class="btn btn--primario" disabled>Desabilitado</button>
+        </section>
+
+        <section>
+            <h2>Card</h2>
+
+            <article class="card">
+                <span class="card__badge">Destaque</span>
+                <div class="card__imagem"></div>
+
+                <div class="card__corpo">
+                    <h3 class="card__titulo">Segurança Digital</h3>
+                    <p class="card__texto">
+                        Conceitos básicos de proteção de dados e redes.
+                    </p>
+                    <a class="card__link" href="#">Saiba mais →</a>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h2>Tabela de cores</h2>
+
+            <table>
+                <tr>
+                    <th>Cor</th>
+                    <th>Preview</th>
+                </tr>
+
+                <tr>
+                    <td>Primária</td>
+                    <td style="background-color: #1a4d8f;"></td>
+                </tr>
+
+                <tr>
+                    <td>Secundária</td>
+                    <td style="background-color: #6c757d;"></td>
+                </tr>
+
+                <tr>
+                    <td>Destaque</td>
+                    <td style="background-color: #ffc107;"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Formulário</h2>
+
+            <form class="form">
+                <div class="form__grupo">
+                    <label class="form__label">Nome</label>
+                    <input class="form__input" type="text" required placeholder="Seu nome">
+                </div>
+
+                <div class="form__grupo">
+                    <label class="form__label">Email</label>
+                    <input class="form__input" type="email" required placeholder="email@dominio.com">
+                </div>
+
+                <div class="form__grupo">
+                    <label class="form__label">Senha</label>
+                    <input class="form__input" type="password" required placeholder="Digite sua senha">
+                </div>
+
+                <div class="form__grupo">
+                    <label class="form__label">Mensagem</label>
+                    <input class="form__input" type="text" placeholder="Mensagem opcional">
+                </div>
+
+                <button class="form__botao btn btn--primario">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>

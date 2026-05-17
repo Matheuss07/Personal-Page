@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+ul, ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a[href^="https"] {
+  color: green;
+}
+
+a[href^="http://"] {
+  color: red;
+}
+
+a[href^="http://"]::after {
+  content: " ⚠";
+}
+
+a[href$=".pdf"] {
+  color: orange;
+}
+
+a[href$=".pdf"]::after {
+  content: " [PDF]";
+}
+
+a[href^="#"] {
+  color: gray;
+  font-style: italic;
+}
+
+a[target="_blank"]::after {
+  content: " ↗";
+}
+
+#sec-estrutural li:first-child {
+  font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+  color: blue;
+}
+
+#sec-estrutural li:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+#sec-estrutural li:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+#sec-estrutural li:nth-child(3) {
+  border-left: 4px solid #1a4d8f;
+  padding-left: 8px;
+}
+
+input {
+  display: block;
+  margin-bottom: 12px;
+  padding: 8px;
+  width: 250px;
+}
+
+input:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+input:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+input:required {
+  border-left: 4px solid orange;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+button {
+  padding: 8px 14px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.citacao::before {
+  content: '" ';
+  font-size: 24px;
+  color: blue;
+}
+
+.citacao::after {
+  content: ' "';
+  font-size: 24px;
+  color: blue;
+}
+
+.obrigatorio::after {
+  content: " *";
+  color: red;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+.input-custom::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+h3 + p {
+  font-size: 1.1rem;
+  color: #1a4d8f;
+}
+
+#sec-combinadores li:not(.ativo) {
+  opacity: 0.5;
+}
+
+#sec-combinadores li.ativo {
+  font-weight: bold;
+}
+
+#sec-combinadores li.ativo::before {
+  content: "✔ ";
+  color: green;
+}
