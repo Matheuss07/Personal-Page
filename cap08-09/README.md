@@ -7,10 +7,10 @@ Matheus dos Santos Luna
 Hacker Interface Minimalista
 
 ## Design de Referência
-Mid Century Modern
+Switch On
 
 ## Link de Referência
-https://www.csszengarden.com/221/
+https://www.csszengarden.com/113/
 
 ## Descrição
 O projeto foi desenvolvido utilizando CSS Grid para a estrutura principal da página e Flexbox para organização dos componentes internos.
