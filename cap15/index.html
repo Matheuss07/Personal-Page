@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Técnica — Apex Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Ficha de Inscrição — Apex Tech</h1>
+        <form id="cadastroForm" novalidate>
+            
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                
+                <div class="form-group">
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" name="nome" required minlength="3">
+                    <span class="error-msg" id="nome-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-msg" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(82) 99999-9999" required>
+                    <span class="error-msg" id="telefone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataNascimento">Data de nascimento *</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                    <span class="error-msg" id="dataNascimento-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="curso">Curso *</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione...</option>
+                        <option value="Informática">Informática</option>
+                        <option value="Eletrotécnica">Eletrotécnica</option>
+                        <option value="Mecânica">Mecânica</option>
+                    </select>
+                    <span class="error-msg" id="curso-error"></span>
+                </div>
+
+                <div class="form-group-radio">
+                    <label>Turno *</label>
+                    <div class="options">
+                        <label><input type="radio" name="turno" value="Matutino" required> Matutino</label>
+                        <label><input type="radio" name="turno" value="Vespertino"> Vespertino</label>
+                        <label><input type="radio" name="turno" value="Noturno"> Noturno</label>
+                    </div>
+                    <span class="error-msg" id="turno-error"></span>
+                </div>
+
+                <div class="form-group-checkbox">
+                    <label>Áreas de interesse (Mínimo 2)</label>
+                    <div class="options">
+                        <label><input type="checkbox" name="interesses" value="Programação"> Programação</label>
+                        <label><input type="checkbox" name="interesses" value="Redes"> Redes</label>
+                        <label><input type="checkbox" name="interesses" value="Banco de Dados"> Banco de Dados</label>
+                    </div>
+                    <span class="error-msg" id="interesses-error"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Segurança</legend>
+                
+                <div class="form-group">
+                    <label for="senha">Senha *</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="senha" name="senha" required minlength="8">
+                        <button type="button" class="toggle-password" data-target="senha">👁️</button>
+                    </div>
+                    <div class="strength-meter">
+                        <div id="strength-fill"></div>
+                        <span id="strength-label">Força</span>
+                    </div>
+                    <span class="error-msg" id="senha-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmarSenha">Confirmar senha *</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+                        <button type="button" class="toggle-password" data-target="confirmarSenha">👁️</button>
+                    </div>
+                    <span class="error-msg" id="confirmarSenha-error"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+                
+                <div class="form-group">
+                    <label for="foto">Foto (Opcional - JPG/PNG até 2MB)</label>
+                    <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+                    <img id="image-preview" alt="Preview da imagem">
+                    <span class="error-msg" id="foto-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="textarea-header">
+                        <label for="mensagem">Mensagem *</label>
+                        <span id="char-counter">0 / 500</span>
+                    </div>
+                    <textarea id="mensagem" name="mensagem" required minlength="50" maxlength="500"></textarea>
+                    <span class="error-msg" id="mensagem-error"></span>
+                </div>
+
+                <div class="form-group-terms">
+                    <label>
+                        <input type="checkbox" id="termos" name="termos" required>
+                        Aceito os <a href="#" id="btn-terms">Termos e Condições</a> *
+                    </label>
+                    <span class="error-msg" id="termos-error"></span>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="reset" id="btn-limpar">Limpar</button>
+                <button type="submit" id="btn-enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Confirme os seus dados</h2>
+            <p>Deseja realmente enviar a sua inscrição?</p>
+            <div class="modal-buttons">
+                <button type="button" id="modal-cancel">Corrigir</button>
+                <button type="button" id="modal-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Termos -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <h2>Termos de Inscrição</h2>
+            <p>1. O preenchimento dos dados é de responsabilidade do aluno.</p>
+            <p>2. Os dados de contato devem estar sempre atualizados.</p>
+            <button type="button" id="terms-close">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Animação/Tela de Sucesso -->
+    <div id="success-overlay" class="modal">
+        <div class="modal-content success-content">
+            <div class="checkmark-circle">✓</div>
+            <h2>Inscrição Concluída!</h2>
+            <p>Seus dados foram validados e registrados com sucesso.</p>
+            <button type="button" id="success-close">Voltar</button>
+        </div>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="js/validacoes.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
